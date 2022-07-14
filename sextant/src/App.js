@@ -1,16 +1,21 @@
-import React from 'react'
-import Banner from './Component/Banner/Banner.js'
+import React, { Component } from 'react';
 import './App.css';
-import CommentList from './Component/CommentList/CommentList.js';
-import CommentListChild from './Component/CommentListChild/CommentListChild.js'
+import Banner from './Banner';
+import Exhibit from './Exhibit';
+import GetIP from './GetIP';
 
-function App() {
-  return (
-    <div className="App">
-      <Banner />
-      <CommentList/>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <div className="App">
+                <Banner bannerText="Ahmed's Sextant" />
+                <Exhibit name="I'm an exhibit!"></Exhibit>
+                <Exhibit name="I'm also an exhibit!"></Exhibit>
+                <Exhibit name="Don't forget about me, I'm an exhibit too!"></Exhibit>
+                <GetIP/>
+            </div>
+        );
+    }
 }
 
 export default App;
